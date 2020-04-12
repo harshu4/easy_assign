@@ -4,16 +4,24 @@ use std::fs;
 use std::fs::File;
 use std::{env, process::Command, thread, time};
 pub mod pdf;
+pub mod java;
 use pdf::pdfmaker;
+use java::{java,create_output};
+
 
 fn main() {
-     let args: Vec<String> = env::args().collect();
+     let mut args: Vec<String> = env::args().collect();
      if args.len() < 3 {
          
          pdfmaker(args[1].parse::<u8>().unwrap());
          println!("Prepared, Your Assignment is Done");
          return ()
      }
+
+     else if args[1] == "java"{
+        args[1] = String::from("");
+        return java(args)
+    }
     let contents = fs::read_to_string("ob.txt").expect("Something went wrong reading the file");
     let mut vec: Vec<String> = Vec::new();
     vec.push(String::from(""));
@@ -63,38 +71,3 @@ fn main() {
    
 }
 
-fn create_output(command: String, path: String){
-    let mut rng = rand::thread_rng();
-
-    let display_number: u8 = rng.gen();
-
-    Command::new("sh")
-        .arg("-c")
-        .arg(format!("Xvfb :{} -screen 5 100x100x8 &", &display_number))
-        .spawn()
-        .expect("failed to spawn");
-
-    thread::sleep(time::Duration::from_millis(1000));
-
-    Command::new("sh")
-        .env("DISPLAY", format!(":{}", &display_number))
-        .arg("-c")
-        .arg(format!(
-            "xterm -hold -fa monaco -fs 25 -bg black -fg green -maximized -e {} &",
-            command
-        ))
-        .spawn()
-        .expect("failed to spawn");
-
-    thread::sleep(time::Duration::from_millis(1000));
-
-    Command::new("sh")
-        .arg("-c")
-        .arg(format!(
-            "xwd -display :{} -root -silent | convert xwd:- png:{}",
-            &display_number, path
-        ))
-        .spawn()
-        .expect("failed to spawn");
-
-}
