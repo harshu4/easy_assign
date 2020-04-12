@@ -1,0 +1,5 @@
+target/debug/get_output dwij patel 180410107071
+Practical-7
+Enter a number
+5
+120

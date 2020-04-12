@@ -1,0 +1,9 @@
+target/debug/get_output dwij patel 180410107071
+Practical-9
+Enter the three subject marks for the student
+5
+
+
+Sum of 3 subjects are:
+Percentage:
+You get Fail

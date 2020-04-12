@@ -1,0 +1,3 @@
+target/debug/get_output dwij patel 180410107071
+Practical 10
+Date  was valid

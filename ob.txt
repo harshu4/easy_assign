@@ -1,0 +1,131 @@
+
+---!---
+      echo "Patel Abhi    RameshKumar 180410107060 (CE-1) Batch-D "   
+echo "Practical-7"   
+echo "Enter a number"   
+read num   
+echo $num
+fact=1   
+for((i=2;i<=num;i++))   
+{   
+fact=$((fact * i))   
+}   
+echo $fact   
+---!---
+ echo " Patel Abhi RameshKumar 180410107060 (CE-1) Batch-D "   
+echo "Practical-7"   
+echo "Enter the number"   
+read a   
+echo $a
+i=2   
+z=0   
+echo $a   
+while [ $i -lt $a ]   
+do   
+s=`expr $a % $i`   
+if [ $s -eq $z ]   
+then   
+echo "Not Prime"   
+exit   
+else   
+i=`expr $i + 1`   
+fi   
+done   
+echo "Prime number"   
+---!---
+echo " Patel Abhi RameshKumar 180410107060 (CE-1) Batch-D "   
+echo "Practical-8"   
+echo -n "Enter number : "   
+read n   
+echo $n
+sd=0   
+rev=""   
+on=$n   
+echo $n   
+while [ $n -gt 0 ]   
+do   
+    sd=$(( $n % 10 )) # get Remainder     
+     n=$(( $n / 10 ))    # get next digit   
+     # store previous number and current digit in reverse     
+     rev=$( echo ${rev}${sd} )     
+done   
+if [ $on -eq $rev ];   
+then   
+   echo "Number is palindrome"   
+else   
+   echo "Number is NOT palindrome"   
+fi   
+---!---
+echo " Patel Abhi RameshKumar 180410107060 (CE-1) Batch-D "   
+echo "Practical-8"     
+echo "Enter a number"   
+read N   
+echo $N
+a=0     
+b=1       
+echo "The Fibonacci series is : "   
+for (( i=0; i<N; i++ ))     
+do   
+     echo -n "$a "   
+     fn=$((a + b))     
+     a=$b     
+     b=$fn     
+done 
+---!---
+echo " Patel Abhi RameshKumar 180410107060 (CE-1) Batch-D "   
+echo "Practical-9"     
+echo "Enter the three subject marks for the student"   
+read m1 m2 m3     
+echo $m1
+echo $m2
+echo $m3
+sum1=`expr $m1 + $m2 + $m3`   
+echo "Sum of 3 subjects are:" $sum1   
+per=`expr $sum1 / 3`   
+echo "Percentage:" $per   
+if [ $per -ge 60 ]   
+then   
+echo "You get Distinction"   
+elif [ $per -ge 50 ]   
+then   
+echo "You get First class"   
+elif [ $per -ge    40 ]   
+then   
+echo "You get Second class"   
+else   
+      echo "You get Fail"   
+fi 
+---!---
+echo " Patel Abhi RameshKumar 180410107060 (CE-1) Batch-D "   
+read a     
+echo $a
+read b     
+echo $b
+echo "Enter Choice :"   
+echo "1. Addition"   
+echo "2. Subtraction"   
+echo "3. Multiplication"   
+echo "4. Division"   
+read ch     
+echo $ch
+case $ch in   
+1)res=`echo $a + $b | bc`     
+;;     
+2)res=`echo $a - $b | bc`     
+;;     
+3)res=`echo $a \* $b | bc`     
+;;     
+4)res=`echo "scale=2; $a / $b" | bc`     
+;;     
+esac   
+echo "Result : $res" 
+---!---
+echo " Patel Abhi RameshKumar 180410107060 (CE-1) Batch-D "   
+echo "Practical 10"   
+usrdate=$1   
+date -d "$usrdate"    > /dev/null 2>&1   
+if [ $? -eq 0 ]; then   
+         echo "Date $usrdate was valid"   
+else   
+         echo "Date $usrdate was invalid"   
+fi   

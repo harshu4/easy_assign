@@ -1,0 +1,10 @@
+target/debug/get_output dwij patel 180410107071
+5
+4
+Enter Choice :
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+3
+Result : 20
