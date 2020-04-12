@@ -1,9 +1,4 @@
-target/debug/get_output Harsh Gandhi 180410107028
-Practical-9
-Enter the three subject marks for the student
-5
-
-
-Sum of 3 subjects are:
-Percentage:
-You get Fail
+180410107028     harsh gandhi
+Enter String
+No of vowel=0
+No of consonant=4

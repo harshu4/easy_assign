@@ -1,4 +1,4 @@
-echo "target/debug/get_output Harsh Gandhi 180410107028"
+echo "target/debug/get_output test java harsh gandhi 180410107028"
 echo "Practical 10"   
 usrdate=$1   
 date -d "$usrdate"    > /dev/null 2>&1   

@@ -1,5 +1,4 @@
-target/debug/get_output Harsh Gandhi 180410107028
-Practical-8
-Enter number : 5
-5
-Number is palindrome
+180410107028     harsh gandhi
+Enter height in inches
+Enter weight in pounds
+BMI=2.9263965342920005E-5

@@ -1,6 +1,8 @@
-target/debug/get_output Harsh Gandhi 180410107028
-Practical-8
-Enter a number
-5
-The Fibonacci series is : 
-0 1 1 2 3 
+180410107028     harsh gandhi
+Enter no1
+Enter no2
+Enter no3
+
+3
+2
+2

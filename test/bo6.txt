@@ -1,10 +1,11 @@
-target/debug/get_output Harsh Gandhi 180410107028
-5
-4
-Enter Choice :
-1. Addition
-2. Subtraction
-3. Multiplication
-4. Division
-3
-Result : 20
+180410107028     harsh gandhi
+DWI 7654
+YZP 1840
+MXC 5877
+COO 7668
+YHH 6430
+IWM 6759
+KNY 7825
+NIK 7530
+XKB 7125
+YIN 8198

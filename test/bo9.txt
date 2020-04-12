@@ -1,0 +1,13 @@
+180410107028     harsh gandhi
+Enter 10 numbers
+Reverse numbers
+b[0]=5
+b[1]=25
+b[2]=2
+b[3]=5
+b[4]=53335
+b[5]=547
+b[6]=45
+b[7]=3
+b[8]=2
+b[9]=1

@@ -1,3 +1,4 @@
+---!---
 Practical – 7 
 
 1)Write a shell script to find factorial of given 

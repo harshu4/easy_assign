@@ -1,4 +1,4 @@
-echo "target/debug/get_output Harsh Gandhi 180410107028"
+echo "target/debug/get_output test java harsh gandhi 180410107028"
 echo "Practical-8"     
 echo "Enter a number"   
 read N   
