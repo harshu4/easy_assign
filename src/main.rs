@@ -63,38 +63,74 @@ fn main() {
    
 }
 
-fn create_output(command: String, path: String){
-    let mut rng = rand::thread_rng();
 
-    let display_number: u8 = rng.gen();
+fn create_output(command:String,path:String){
 
-    Command::new("sh")
-        .arg("-c")
-        .arg(format!("Xvfb :{} -screen 5 100x100x8 &", &display_number))
-        .spawn()
-        .expect("failed to spawn");
+        let mut rng = rand::thread_rng();
 
-    thread::sleep(time::Duration::from_millis(1000));
+        let  display_number:u8=rng.gen();
 
-    Command::new("sh")
-        .env("DISPLAY", format!(":{}", &display_number))
-        .arg("-c")
-        .arg(format!(
-            "xterm -hold -fa monaco -fs 25 -bg black -fg green -maximized -e {} &",
-            command
-        ))
-        .spawn()
-        .expect("failed to spawn");
+        let xvfb_command=format!("Xvfb :{} -screen 5 100x100x8 &",&display_number);
+   
+        Command::new("sh")
+            .arg("-c")
+            .arg(&xvfb_command)
+            .spawn()
+            .expect("failed to spawn");
+            
 
-    thread::sleep(time::Duration::from_millis(1000));
+        thread::sleep(time::Duration::from_millis(1000));
+            
+        Command::new("sh")
+                    .env("DISPLAY", format!(":{}",&display_number))
+                    .arg("-c")
+                    .arg(format!("xterm -hold -fa monaco -fs 25 -bg black -fg green -maximized -e {} &",command))
+                    .spawn()
+                    .expect("failed to spawn");
+           
+        thread::sleep(time::Duration::from_millis(1000));
 
-    Command::new("sh")
-        .arg("-c")
-        .arg(format!(
-            "xwd -display :{} -root -silent | convert xwd:- png:{}",
-            &display_number, path
-        ))
-        .spawn()
-        .expect("failed to spawn");
+        Command::new("sh")
+                    .arg("-c")
+                    .arg(format!("xwd -display :{} -root -silent | convert xwd:- png:{}",&display_number,path))
+                    .spawn()
+                    .expect("failed to spawn");
+
+        thread::sleep(time::Duration::from_millis(1000));
+
+
+        let xterm_process=Command::new("sh")
+            .arg("-c")
+            .arg(format!("ps -aux |grep '{}'",format!("xterm -hold -fa monaco -fs 25 -bg black -fg green -maximized -e {}",command))) 
+            .output()
+            .expect("failed to execute process");
+
+        let xterm_process:Vec<&str>=str::from_utf8(&xterm_process.stdout).unwrap().split(" ").collect(); 
+        let xterm_process_pid = xterm_process[7];
+
+        Command::new("sh")
+            .arg("-c")
+            .arg(format!("kill {}",xterm_process_pid)) 
+            .output()
+            .expect("failed to execute process");
+                    
+        let xvfb_process=Command::new("sh")
+                            .arg("-c")
+                            .arg(format!("ps -aux |grep 'Xvfb :{}'",display_number)) 
+                            .output()
+                            .expect("failed to execute process");
+
+        let xvfb_process:Vec<&str>=str::from_utf8(&xvfb_process.stdout).unwrap().split(" ").collect(); 
+        let xvfb_process_pid = xvfb_process[7];
+
+        Command::new("sh")
+            .arg("-c")
+            .arg(format!("kill {}",xvfb_process_pid)) 
+            .output()
+            .expect("failed to execute process");
+        println!("{}", display_number);
+
 
 }
+
+
