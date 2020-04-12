@@ -55,7 +55,11 @@ pub fn pdfmaker(size:u8){
             y=y-5.0;
             
         }
-        
+        if y-100 < 5.0 {
+         	y=240.0;
+                let (page, layer) = (mypdf.0).add_page(Mm(150.0), Mm(250.0),format!("Practicle {}",x));
+                current_layer = (mypdf.0).get_page(page).get_layer(layer);
+        }
         
         let mut image_file = File::open(format!("test/work{}.png",x+1)).unwrap();
         let image = Image::try_from(image::png::PngDecoder::new(&mut image_file).unwrap()).unwrap();
