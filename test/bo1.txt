@@ -1,0 +1,5 @@
+target/debug/get_output Harsh Gandhi 180410107028
+Practical-7
+Enter a number
+5
+120

@@ -1,0 +1,5 @@
+target/debug/get_output Harsh Gandhi 180410107028
+Practical-8
+Enter number : 5
+5
+Number is palindrome

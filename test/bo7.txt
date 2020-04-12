@@ -1,0 +1,3 @@
+target/debug/get_output Harsh Gandhi 180410107028
+Practical 10
+Date  was valid

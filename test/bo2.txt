@@ -1,0 +1,6 @@
+target/debug/get_output Harsh Gandhi 180410107028
+Practical-7
+Enter the number
+5
+5
+Prime number

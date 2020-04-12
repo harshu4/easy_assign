@@ -1,0 +1,35 @@
+Practical – 7 
+
+1)Write a shell script to find factorial of given 
+number n 
+
+---!---
+2) write a shell  script to find whether given number is prime or 
+not 
+---!---
+Practical – 8 
+
+1).Write a shell script to check entered string is palindrome or 
+not
+
+---!---
+2)  Write  a  shell  script  which  will  generate  first  n  Fibonacci 
+numbers like: 1, 1, 2, 3, 5, 8,…
+
+---!---
+Practical – 9 
+
+Write a shell script to generate mark sheet of a student. Take 3 
+subjects, calculate and display total marks, percentage and 
+Class obtained by the student. 
+
+---!---
+
+Practical-10 
+
+1). Write a menu driven shell script to make calculator using 
+switch case.
+
+---!---
+
+2) Write a shell script to validate the entered date. 
