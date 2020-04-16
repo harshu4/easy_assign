@@ -1,22 +1,22 @@
 180410107028         harsh gandhi
-1 0 1 0 1 1 
-1 1 0 1 0 0 
-0 1 0 1 1 0 
-1 0 0 1 1 0 
-1 1 0 0 0 1 
-1 1 0 0 1 0 
+1 1 1 0 0 1 
+0 1 0 0 0 1 
+0 1 1 1 1 1 
+0 1 1 1 0 0 
+0 1 1 1 1 1 
+1 1 1 1 0 0 
 Row wise
 Row 1:even
-Row 2:odd
+Row 2:even
 Row 3:odd
 Row 4:odd
 Row 5:odd
-Row 6:odd
+Row 6:even
 
 Column wise
-Column 1:odd
+Column 1:even
 Column 2:even
 Column 3:odd
-Column 4:odd
+Column 4:even
 Column 5:even
 Column 6:even

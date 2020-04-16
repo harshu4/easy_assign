@@ -16,7 +16,7 @@ public class VA
   System.out.print("Enter five integers: ");   int[] list = new int[5];  
   for (int i = 0; i < list.length; i++)  
   { 
-   list[i] = input.nextInt(); 
+   list[i] = i ;
   } 
  
   System.out.println("The smallest element is " + min(list)); 

@@ -1,0 +1,3 @@
+180410107007
+harsh gandhi
+Enter five integers: The smallest element is 0
