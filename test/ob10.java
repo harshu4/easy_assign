@@ -7,7 +7,7 @@ public class Obj
 { 
 public static void  main(String []args) 
 { 
-    System.out.println("180410107071         dwij patel"); 
+    System.out.println("180410107028         harsh gandhi"); 
     Random r=new Random(); 
     int a[][]=new int[6][6]; 
     int i,j,count; 

@@ -8,7 +8,7 @@ class c2
 {
 	public static void main(String []args)
 	{
-		System.out.println("180410107071     dwij patel");
+		System.out.println("180410107028     harsh gandhi");
 
 		
 		Random r1=new Random();

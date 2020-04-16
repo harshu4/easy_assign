@@ -24,7 +24,7 @@ p1.add(new ImageView(new Image(new FileInputStream("aa.png"))), i, j);
 }  
 }  
  Scene scene = new Scene(p1, 700, 700);  
-primaryStage.setTitle("dwij patel-180410107071");   
+primaryStage.setTitle("harsh gandhi-180410107028");   
 primaryStage.setScene(scene);   
 primaryStage.show();   
 }  

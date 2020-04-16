@@ -7,7 +7,7 @@ class VA
 {
 	public static void main(String []args)
 	{
-		System.out.println("180410107071     dwij patel");
+		System.out.println("180410107028     harsh gandhi");
 		Scanner s=new Scanner(System.in);
 		double weight,height,bmi;
 		System.out.println("Enter height in inches");

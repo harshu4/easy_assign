@@ -6,7 +6,7 @@ class a3
 {
 	public static void main(String []args)
 	{
-		System.out.println("180410107071     dwij patel");
+		System.out.println("180410107028     harsh gandhi");
 		Scanner s=new Scanner(System.in);
 		double mtr,ft;
 		System.out.println("Enter value in meter");

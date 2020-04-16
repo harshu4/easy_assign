@@ -24,7 +24,7 @@ public class VA
  public static void main(String[] args)
  {
   System.out.println("180410107007"); 
-  System.out.println("dwij patel");
+  System.out.println("harsh gandhi");
   Scanner input = new Scanner(System.in);
   System.out.print("Enter Binary Value : ");
   String str = input.nextLine();

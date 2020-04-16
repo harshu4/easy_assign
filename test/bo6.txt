@@ -1,10 +1,11 @@
-target/debug/get_output dwij patel 180410107071
-5
-4
-Enter Choice :
-1. Addition
-2. Subtraction
-3. Multiplication
-4. Division
-3
-Result : 20
+180410107028     harsh gandhi
+MJM 3959
+JXT 8162
+IEZ 9641
+QRX 4945
+SNG 7082
+UVE 4057
+LSR 6497
+VNF 9206
+FXD 9141
+DUT 5195

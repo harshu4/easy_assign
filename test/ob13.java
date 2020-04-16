@@ -13,7 +13,7 @@ public class VA
  public static void main(String[] args)
  {
    System.out.println("180410107007"); 
-  System.out.println("dwij patel");
+  System.out.println("harsh gandhi");
   ArrayList<Object> arr_list = new ArrayList<Object>();
   arr_list.add(new Loan(5000.50));  
   arr_list.add(new Date());  

@@ -774,7 +774,7 @@ if(x1<420)
 {  
 t1.setText(str1);  
 double x; 
-t1.setX(x); 
+t1.setX(x1); 
 }  
 else  
 {  

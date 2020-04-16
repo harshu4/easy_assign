@@ -1,5 +1,6 @@
-target/debug/get_output dwij patel 180410107071
-Practical-7
-Enter a number
-5
-120
+180410107028     harsh gandhi
+Equations
+3.4x + 50.2y = 44.5
+2.1x + 55y = 5.9
+Solutions
+x=26.370679088011777   y=-0.8996077469968131
