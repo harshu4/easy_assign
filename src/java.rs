@@ -69,7 +69,7 @@ pub fn java(veci:Vec<String>) {
    let mut i = vec.len();
    println!("Hello this is i {}",i);
    let mut fileso = String::from("test/ob");
-   for t in 16..i{
+   for t in 0..i-1{
        files.push_str(&t.to_string());
        files.push_str(".java");
 
@@ -84,9 +84,17 @@ pub fn java(veci:Vec<String>) {
             continue;
            
         }
+        if (t  == 24){
+            let v = run_fun!("cat test/ans{}.txt | java {} 123.txt",t,&files).expect("helo");
+       fs::write(format!("test/bo{}.txt",t),&v).expect("hlfs");
+       create_output(String::from(format!("cat test/bo{}.txt",t)),String::from(format!("test/work{}.png",t.to_string()))); 
+       files = String::from("test/ob");   
+       continue;
+           
+        }
        let v = run_fun!("cat test/ans{}.txt | java {}",t,&files).expect("helo");
        fs::write(format!("test/bo{}.txt",t),&v).expect("hlfs");
-       create_output(String::from(format!("cat bo{}.txt",t)),String::from(format!("work{}.png",t.to_string()))); 
+       create_output(String::from(format!("cat test/bo{}.txt",t)),String::from(format!("test/work{}.png",t.to_string()))); 
        files = String::from("test/ob");   
         
    }

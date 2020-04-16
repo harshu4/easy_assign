@@ -8,7 +8,7 @@ pub fn pdfmaker(size:u8){
 
     let mypdf = PdfDocument::new("OS Assignment", Mm(150.0), Mm(250.0), "Practical 0");
     let font = (mypdf.0).add_external_font(File::open("mono.ttf").unwrap()).unwrap();
-    let mut file2 = File::open("test/question.txt").expect("question not found");
+    let mut file2 = File::open("test/hl.txt").expect("question not found");
     let mut contents2 = String::from("");
     file2.read_to_string(&mut contents2).expect("lol");
     let mut vec:Vec<&str> = Vec::new();
@@ -18,16 +18,16 @@ pub fn pdfmaker(size:u8){
         vec.push(line);
     }
     let mut vec_index = 0;
-    for x in 0..size-1{
+    for x in 0..size{
         let mut current_layer;
         if x==0{
             current_layer = (mypdf.0).get_page(mypdf.1).get_layer(mypdf.2);
         }else{
-            let (page, layer) = (mypdf.0).add_page(Mm(150.0), Mm(250.0),format!("Practical {}",x+1));
+            let (page, layer) = (mypdf.0).add_page(Mm(150.0), Mm(250.0),format!("Practical {}",x));
             current_layer = (mypdf.0).get_page(page).get_layer(layer);
         }
         
-        let mut file = File::open(format!("test/ob{}.sh",x+1)).expect("lol");
+        let mut file = File::open(format!("test/ob{}.java",x)).expect("lol");
         
         let mut contents = String::new();
         file.read_to_string(&mut contents).expect("lol");
@@ -57,7 +57,7 @@ pub fn pdfmaker(size:u8){
         }
         
         
-        let mut image_file = File::open(format!("test/work{}.png",x+1)).unwrap();
+        let mut image_file = File::open(format!("test/work{}.png",x)).unwrap();
         let image = Image::try_from(image::png::PngDecoder::new(&mut image_file).unwrap()).unwrap();
        image.add_to_layer(current_layer.clone(),Some(Mm(5.0)), Some(Mm(y-100.0)), None, None, None, None);
        
